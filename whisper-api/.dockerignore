@@ -1,0 +1,8 @@
+*.mp4
+db/*
+__pycache__
+__pycache__/
+test.py
+vevn
+Dockerfile
+models

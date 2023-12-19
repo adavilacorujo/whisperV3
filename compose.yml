@@ -1,0 +1,33 @@
+version: "3"
+services:
+  whisper-ui:
+    container_name: whisper-ui
+    image: whisper-ui
+    build:
+      context: whisper-ui
+      dockerfile: Dockerfile
+
+  proxy:
+    container_name: whisper-proxy
+    image: nginx:1.20.2-alpine
+    restart: unless-stopped
+    volumes:
+      - "./proxy/nginx.conf:/etc/nginx/nginx.conf"
+    stop_grace_period: 30s
+    ports:
+      - "8080:8080"
+
+  flask:
+    container_name: whisper-api
+    image: whisper-api
+    build:
+      context: whisper-api
+      dockerfile: Dockerfile
+    volumes:
+      - "./whisper-api/models:/home/python/models/"
+    environment:
+      WHISPER_API_LOG_FILE: "./api/logs/api.log"
+      UPLOAD_FOLDER: "./api/db"
+      METADATA_FILE: "./api/db/metadata.pkl"
+      ASR_MODEL_PATH: "./models/pipeline.pkl"
+      QUEUE_FOLDER: "./queue"
