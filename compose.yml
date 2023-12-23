@@ -7,7 +7,7 @@ services:
       context: whisper-ui
       dockerfile: Dockerfile
 
-  proxy:
+  whisper-proxy:
     container_name: whisper-proxy
     image: nginx:1.20.2-alpine
     restart: unless-stopped
@@ -17,7 +17,7 @@ services:
     ports:
       - "8080:8080"
 
-  flask:
+  whisper-api:
     container_name: whisper-api
     image: whisper-api
     build:
@@ -31,3 +31,5 @@ services:
       METADATA_FILE: "./api/db/metadata.pkl"
       ASR_MODEL_PATH: "./models/pipeline.pkl"
       QUEUE_FOLDER: "./queue"
+    ports:
+      - "5000:5000"

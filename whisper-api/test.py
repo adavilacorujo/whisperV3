@@ -41,6 +41,6 @@ pipe = pipeline(
 # pipe = pickle.load(f)
 # f.close()
 
-data_path = '../data/videoplayback.mp3'
+data_path = '../sample_data/HowtoReduceNighttimeUrination_Dr.AndrewHuberman.mp4'
 result = pipe(data_path)
 print(result["text"])

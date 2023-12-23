@@ -1,5 +1,0 @@
-FROM registry1.dso.mil/ironbank/opensource/nodejs/nodejs18:18.3.0
-USER node
-WORKDIR /home/node
-COPY whisper-ui/package.json package.json
-CMD ["npm", "install"]

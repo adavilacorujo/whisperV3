@@ -1,4 +1,0 @@
-FROM python:3.11.3
-WORKDIR /home/python
-COPY whisper-api/requirements.txt requirements.txt
-ENTRYPOINT ["python", "-m", "pip", "install", "--progress-bar", "off", "--disable-pip-version-check", "--no-cache-dir", "--target", ".cache/python-packages", "--requirement", "requirements.txt", "--upgrade"]

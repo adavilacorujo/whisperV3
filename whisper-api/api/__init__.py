@@ -8,6 +8,7 @@ __version__: 0.1
 """
 import json
 import time
+import pickle
 
 from uuid import uuid4
 from flask_cors import CORS
@@ -20,27 +21,38 @@ from .logs import *
 from .config import * 
 
 whisper_app = Flask(__name__)
-whisper_app.config['UPLOAD_FOLDER'] = upload_folder
 whisper_app.secret_key = 'super secret key'
+whisper_app.config['MAX_CONTENT_LENGTH'] = 10000000 # 10MB
+
 CORS(whisper_app)
 
-@whisper_app.route('/upload', methods=['GET','POST'])
+@whisper_app.before_request
+def handle_chunking():
+    """
+    Sets the "wsgi.input_terminated" environment flag, thus enabling
+    Werkzeug to pass chunked requests as streams.  The gunicorn server
+    should set this, but it's not yet been implemented.
+
+    https://github.com/benoitc/gunicorn/issues/1733#issuecomment-377000612
+    """
+
+    transfer_encoding = request.headers.get("Transfer-Encoding", None)
+    if transfer_encoding == u"chunked":
+        request.environ["wsgi.input_terminated"] = True
+
+@whisper_app.route('/api', methods=['GET'])
+def index():
+    """
+    Test index route
+    """
+    return "All is good"
+
+@whisper_app.route('/api/upload', methods=['GET','POST'])
 def submit():
     """
     Upload handler for uploading an mp4
     """
     if request.method == 'POST':
-        input_schema = {
-            "required": [
-                "file"
-            ], "properties": {
-                "file": {"type": "object"}
-            }
-        }
-
-        # request_json = request.get_json()
-        # validate_json_request(request_json, input_schema)
-
         # check if the post request has the file part
         if 'file' not in request.files:
             myResponse = make_response('no file present')
@@ -65,7 +77,7 @@ def submit():
             if verify_if_exists(filename):
                 return abort(409, {"error": 'file already uploaded'})
 
-            file_dir = os.path.join(whisper_app.config['UPLOAD_FOLDER'], file_id)
+            file_dir = os.path.join(upload_folder, file_id)
             os.mkdir(file_dir)
 
             file_path = os.path.join(file_dir, filename)
@@ -105,10 +117,9 @@ def submit():
     else: 
         myResponse = make_response('method not allowed')
         myResponse.status_code = 405
-        myResponse.ok = False
         return myResponse
 
-@whisper_app.route('/model', methods=['POST'])
+@whisper_app.route('/api/model', methods=['POST'])
 def upload():
     """
     Handler for requesting a transcription
@@ -168,7 +179,7 @@ def upload():
 
         return jsonify(model_data)
 
-@whisper_app.route('/uploads', methods=['GET'])
+@whisper_app.route('/api/uploads', methods=['GET'])
 def uploads():
     """
     Get list of uploaded files
@@ -185,7 +196,7 @@ def uploads():
 
     return jsonify(metadata)
 
-@whisper_app.route('/results/<string:id>', methods=['GET'])
+@whisper_app.route('/api/results/<string:id>', methods=['GET'])
 def results(id : str):
     """
     Get result for a given model
@@ -214,9 +225,9 @@ def results(id : str):
             'results': json.load(open(results_path, 'r')),
             'filename': model_data["location"].split(os.sep)[-1],
         })
-    else: abort(404, 'Model has not been ran on this file. Send request to /model to schedule the model.')
+    else: abort(404, 'Model has not been ran on this file. Send request to /model to schedule a translation.')
 
-@whisper_app.route('/<string:id>/<string:video>', methods=['GET'])
+@whisper_app.route('/api/video/<string:id>/<string:video>', methods=['GET'])
 def video(id : str, video : str):
     """
     Get video from API per id
@@ -229,3 +240,5 @@ def video(id : str, video : str):
     """
     video_path = os.path.abspath(os.path.join(upload_folder, id, video))
     return send_file(video_path, mimetype='video' + video_path.split('.')[-1])
+
+
