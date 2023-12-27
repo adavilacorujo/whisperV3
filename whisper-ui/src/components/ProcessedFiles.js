@@ -13,6 +13,7 @@ export const ProcessedFilesComponent = ({ queueHeight, totalHeight }) => {
     axios
       .get(`/api/results/${id}`)
       .then((response) => {
+        console.log("response", response);
         setSelectedFile({
           id: response["data"]["results"]["id"],
           filename: response["data"]["filename"],

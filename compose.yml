@@ -24,12 +24,8 @@ services:
       context: whisper-api
       dockerfile: Dockerfile
     volumes:
-      - "./whisper-api/models:/home/python/models/"
+      - "/Users/adavila/Documents/andres/github/whisper/whisper-api/models/:/home/python/models"
     environment:
-      WHISPER_API_LOG_FILE: "./api/logs/api.log"
-      UPLOAD_FOLDER: "./api/db"
-      METADATA_FILE: "./api/db/metadata.pkl"
-      ASR_MODEL_PATH: "./models/pipeline.pkl"
-      QUEUE_FOLDER: "./queue"
+      OMP_NUM_THREADS: 1
     ports:
       - "5000:5000"

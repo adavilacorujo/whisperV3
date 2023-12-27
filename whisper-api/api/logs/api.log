@@ -1,0 +1,102 @@
+2023-12-24 18:01:36,850 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+2023-12-24 18:01:36,851 - [33mPress CTRL+C to quit[0m
+2023-12-24 18:01:36,851 -  * Restarting with stat
+2023-12-24 18:01:43,009 -  * Debugger is active!
+2023-12-24 18:01:43,046 -  * Debugger PIN: 706-634-508
+2023-12-24 18:04:30,237 - 127.0.0.1 - - [24/Dec/2023 18:04:30] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-24 18:04:30,239 - 127.0.0.1 - - [24/Dec/2023 18:04:30] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-24 18:04:56,985 - POST - http://localhost:5000/api/upload - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/94fd0393-fa8e-474c-b7b5-95bbae3127ee/video1824876094.mp4 -  2.480257987976074MB
+2023-12-24 18:04:56,986 - 127.0.0.1 - - [24/Dec/2023 18:04:56] "POST /api/upload HTTP/1.1" 200 -
+2023-12-24 18:04:57,001 - 127.0.0.1 - - [24/Dec/2023 18:04:57] "OPTIONS /api/model HTTP/1.1" 200 -
+2023-12-24 18:04:57,003 - POST - http://localhost:5000/api/model - model request - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/94fd0393-fa8e-474c-b7b5-95bbae3127ee/video1824876094.mp4
+2023-12-24 18:04:57,003 - translating - 94fd0393-fa8e-474c-b7b5-95bbae3127ee
+2023-12-24 18:05:05,276 - translated - 94fd0393-fa8e-474c-b7b5-95bbae3127ee - 8.273324966430664 seconds
+2023-12-24 18:05:05,278 - 127.0.0.1 - - [24/Dec/2023 18:05:05] "POST /api/model HTTP/1.1" 200 -
+2023-12-24 18:05:39,941 - 127.0.0.1 - - [24/Dec/2023 18:05:39] "GET /api/results/94fd0393-fa8e-474c-b7b5-95bbae3127ee HTTP/1.1" 200 -
+2023-12-24 18:05:41,777 - 127.0.0.1 - - [24/Dec/2023 18:05:41] "GET /api/results/94fd0393-fa8e-474c-b7b5-95bbae3127ee HTTP/1.1" 200 -
+2023-12-24 18:09:25,404 - 127.0.0.1 - - [24/Dec/2023 18:09:25] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-24 18:09:25,406 - 127.0.0.1 - - [24/Dec/2023 18:09:25] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-24 18:09:27,585 - 127.0.0.1 - - [24/Dec/2023 18:09:27] "GET /api/results/94fd0393-fa8e-474c-b7b5-95bbae3127ee HTTP/1.1" 200 -
+2023-12-24 18:12:49,310 - 127.0.0.1 - - [24/Dec/2023 18:12:49] "GET /api/results/94fd0393-fa8e-474c-b7b5-95bbae3127ee HTTP/1.1" 200 -
+2023-12-26 22:19:24,773 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.68.50:5000
+2023-12-26 22:19:24,773 - [33mPress CTRL+C to quit[0m
+2023-12-26 22:19:24,774 -  * Restarting with stat
+2023-12-26 22:19:31,250 -  * Debugger is active!
+2023-12-26 22:19:31,281 -  * Debugger PIN: 706-634-508
+2023-12-26 22:21:31,197 - 127.0.0.1 - - [26/Dec/2023 22:21:31] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:21:31,202 - 127.0.0.1 - - [26/Dec/2023 22:21:31] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:21:32,935 - 127.0.0.1 - - [26/Dec/2023 22:21:32] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:21:32,939 - 127.0.0.1 - - [26/Dec/2023 22:21:32] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:21:50,603 - 127.0.0.1 - - [26/Dec/2023 22:21:50] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:21:50,606 - 127.0.0.1 - - [26/Dec/2023 22:21:50] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:22:09,138 - 127.0.0.1 - - [26/Dec/2023 22:22:09] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:22:09,142 - 127.0.0.1 - - [26/Dec/2023 22:22:09] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:22:11,389 - 127.0.0.1 - - [26/Dec/2023 22:22:11] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:22:11,390 - 127.0.0.1 - - [26/Dec/2023 22:22:11] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:22:16,001 - 127.0.0.1 - - [26/Dec/2023 22:22:16] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:22:16,001 - 127.0.0.1 - - [26/Dec/2023 22:22:16] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:22:59,467 - 127.0.0.1 - - [26/Dec/2023 22:22:59] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:22:59,471 - 127.0.0.1 - - [26/Dec/2023 22:22:59] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:23:09,656 - 127.0.0.1 - - [26/Dec/2023 22:23:09] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:23:09,658 - 127.0.0.1 - - [26/Dec/2023 22:23:09] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:23:12,070 - 127.0.0.1 - - [26/Dec/2023 22:23:12] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:23:12,073 - 127.0.0.1 - - [26/Dec/2023 22:23:12] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:23:15,708 - 127.0.0.1 - - [26/Dec/2023 22:23:15] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:23:15,712 - 127.0.0.1 - - [26/Dec/2023 22:23:15] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
+2023-12-26 22:28:55,647 - 127.0.0.1 - - [26/Dec/2023 22:28:55] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-26 22:28:55,651 - 127.0.0.1 - - [26/Dec/2023 22:28:55] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-26 22:29:06,164 - POST - http://0.0.0.0:5000/api/upload - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/cf08d56e-e588-4631-b644-eab67e2922f6/HowtoReduceNighttimeUrination_Dr.AndrewHuberman.mp4 -  8.420949935913086MB
+2023-12-26 22:29:06,169 - 127.0.0.1 - - [26/Dec/2023 22:29:06] "POST /api/upload HTTP/1.1" 200 -
+2023-12-26 22:29:06,184 - POST - http://0.0.0.0:5000/api/model - model request - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/cf08d56e-e588-4631-b644-eab67e2922f6/HowtoReduceNighttimeUrination_Dr.AndrewHuberman.mp4
+2023-12-26 22:29:06,184 - translating - cf08d56e-e588-4631-b644-eab67e2922f6
+2023-12-26 22:33:17,179 - 127.0.0.1 - - [26/Dec/2023 22:33:17] "[31m[1mPOST /api/upload HTTP/1.1[0m" 413 -
+2023-12-26 22:34:40,910 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-26 22:34:45,544 -  * Restarting with stat
+2023-12-26 22:34:51,078 -  * Debugger is active!
+2023-12-26 22:34:51,110 -  * Debugger PIN: 706-634-508
+2023-12-26 22:36:12,637 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-26 22:36:13,118 -  * Restarting with stat
+2023-12-26 22:36:21,091 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.68.50:5000
+2023-12-26 22:36:21,092 - [33mPress CTRL+C to quit[0m
+2023-12-26 22:36:21,092 -  * Restarting with stat
+2023-12-26 22:36:25,045 -  * Debugger is active!
+2023-12-26 22:36:25,067 -  * Debugger PIN: 706-634-508
+2023-12-26 22:36:30,048 - 127.0.0.1 - - [26/Dec/2023 22:36:30] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-26 22:36:30,054 - 127.0.0.1 - - [26/Dec/2023 22:36:30] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-26 22:36:30,065 - POST - http://0.0.0.0:5000/api/model - model request - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/cf08d56e-e588-4631-b644-eab67e2922f6/HowtoReduceNighttimeUrination_Dr.AndrewHuberman.mp4
+2023-12-26 22:36:30,066 - translating - cf08d56e-e588-4631-b644-eab67e2922f6
+2023-12-26 22:36:30,084 - POST - http://0.0.0.0:5000/api/model - model request - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/cf08d56e-e588-4631-b644-eab67e2922f6/HowtoReduceNighttimeUrination_Dr.AndrewHuberman.mp4
+2023-12-26 22:36:30,084 - translating - cf08d56e-e588-4631-b644-eab67e2922f6
+2023-12-26 22:36:41,410 - POST - http://0.0.0.0:5000/api/upload - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/a348a8a0-92fd-4ff5-98e8-7e3d5a606861/Aqui_Vive_Gente.mp4 -  67.41082191467285MB
+2023-12-26 22:36:41,413 - 127.0.0.1 - - [26/Dec/2023 22:36:41] "POST /api/upload HTTP/1.1" 200 -
+2023-12-26 22:36:41,432 - POST - http://0.0.0.0:5000/api/model - model request - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/a348a8a0-92fd-4ff5-98e8-7e3d5a606861/Aqui_Vive_Gente.mp4
+2023-12-26 22:36:41,432 - translating - a348a8a0-92fd-4ff5-98e8-7e3d5a606861
+2023-12-26 22:37:36,098 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.68.50:5000
+2023-12-26 22:37:36,098 - [33mPress CTRL+C to quit[0m
+2023-12-26 22:37:36,098 -  * Restarting with stat
+2023-12-26 22:37:39,843 -  * Debugger is active!
+2023-12-26 22:37:39,871 -  * Debugger PIN: 706-634-508
+2023-12-26 22:43:29,052 - 127.0.0.1 - - [26/Dec/2023 22:43:29] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-26 22:43:29,055 - 127.0.0.1 - - [26/Dec/2023 22:43:29] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-26 22:43:30,334 - 127.0.0.1 - - [26/Dec/2023 22:43:30] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-26 22:43:30,340 - 127.0.0.1 - - [26/Dec/2023 22:43:30] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-26 22:43:31,817 - 127.0.0.1 - - [26/Dec/2023 22:43:31] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-26 22:43:31,822 - 127.0.0.1 - - [26/Dec/2023 22:43:31] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-26 22:43:34,395 - 127.0.0.1 - - [26/Dec/2023 22:43:34] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-26 22:43:34,399 - 127.0.0.1 - - [26/Dec/2023 22:43:34] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-26 22:43:38,823 - POST - http://0.0.0.0:5000/api/upload - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 -  67.41082191467285MB
+2023-12-26 22:43:38,824 - 127.0.0.1 - - [26/Dec/2023 22:43:38] "POST /api/upload HTTP/1.1" 200 -
+2023-12-26 22:43:38,835 - POST - http://0.0.0.0:5000/api/model - model request - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4
+2023-12-26 22:43:38,835 - translating - 7e7fe030-02c7-4481-b1de-b2b607847d7f

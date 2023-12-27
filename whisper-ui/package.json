@@ -2,7 +2,7 @@
   "name": "whisper-ui",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://0.0.0.0:5000/api",
+  "proxy": "http://0.0.0.0:5000",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "",
     "@emotion/react": "^11.11.1",

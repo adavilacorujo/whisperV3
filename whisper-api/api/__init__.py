@@ -22,9 +22,9 @@ from .config import *
 
 whisper_app = Flask(__name__)
 whisper_app.secret_key = 'super secret key'
-whisper_app.config['MAX_CONTENT_LENGTH'] = 10000000 # 10MB
+whisper_app.config['MAX_CONTENT_LENGTH'] = 100000000 # 100MB
 
-CORS(whisper_app)
+# CORS(whisper_app)
 
 @whisper_app.before_request
 def handle_chunking():
@@ -141,6 +141,8 @@ def upload():
         file_path = request_json.get('file')
         file_id = request_json.get('id')
 
+        # if os.path.exists(os.path.join(upload_folder, file_id, 'results.json')):
+
         whisper_app.logger.info('%s - %s - model request - %s', request.method, request.url, file_path)
         start_time = time.time()
         whisper_app.logger.info('translating - %s', file_id)
@@ -148,7 +150,7 @@ def upload():
 
         if not flag:
             whisper_app.logger.info('model request already in queue %s - %s', file_path, file_id)
-            abort(409, 'Already in queue')
+            abort(409, 'Already in queue')            
 
         end_time = time.time() - start_time
         whisper_app.logger.info('translated - %s - %s seconds', file_id, end_time)
@@ -160,6 +162,7 @@ def upload():
         temp_model_data = model_data
         f.close()
 
+        model_data['result'] = text
         model_data["time"] = end_time
         model_data["model_ran"] = True
         model_data["model_date"] = datetime.now()
