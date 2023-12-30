@@ -1,102 +1,630 @@
-2023-12-24 18:01:36,850 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://127.0.0.1:5000
-2023-12-24 18:01:36,851 - [33mPress CTRL+C to quit[0m
-2023-12-24 18:01:36,851 -  * Restarting with stat
-2023-12-24 18:01:43,009 -  * Debugger is active!
-2023-12-24 18:01:43,046 -  * Debugger PIN: 706-634-508
-2023-12-24 18:04:30,237 - 127.0.0.1 - - [24/Dec/2023 18:04:30] "GET /api/uploads HTTP/1.1" 200 -
-2023-12-24 18:04:30,239 - 127.0.0.1 - - [24/Dec/2023 18:04:30] "GET /api/uploads HTTP/1.1" 200 -
-2023-12-24 18:04:56,985 - POST - http://localhost:5000/api/upload - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/94fd0393-fa8e-474c-b7b5-95bbae3127ee/video1824876094.mp4 -  2.480257987976074MB
-2023-12-24 18:04:56,986 - 127.0.0.1 - - [24/Dec/2023 18:04:56] "POST /api/upload HTTP/1.1" 200 -
-2023-12-24 18:04:57,001 - 127.0.0.1 - - [24/Dec/2023 18:04:57] "OPTIONS /api/model HTTP/1.1" 200 -
-2023-12-24 18:04:57,003 - POST - http://localhost:5000/api/model - model request - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/94fd0393-fa8e-474c-b7b5-95bbae3127ee/video1824876094.mp4
-2023-12-24 18:04:57,003 - translating - 94fd0393-fa8e-474c-b7b5-95bbae3127ee
-2023-12-24 18:05:05,276 - translated - 94fd0393-fa8e-474c-b7b5-95bbae3127ee - 8.273324966430664 seconds
-2023-12-24 18:05:05,278 - 127.0.0.1 - - [24/Dec/2023 18:05:05] "POST /api/model HTTP/1.1" 200 -
-2023-12-24 18:05:39,941 - 127.0.0.1 - - [24/Dec/2023 18:05:39] "GET /api/results/94fd0393-fa8e-474c-b7b5-95bbae3127ee HTTP/1.1" 200 -
-2023-12-24 18:05:41,777 - 127.0.0.1 - - [24/Dec/2023 18:05:41] "GET /api/results/94fd0393-fa8e-474c-b7b5-95bbae3127ee HTTP/1.1" 200 -
-2023-12-24 18:09:25,404 - 127.0.0.1 - - [24/Dec/2023 18:09:25] "GET /api/uploads HTTP/1.1" 200 -
-2023-12-24 18:09:25,406 - 127.0.0.1 - - [24/Dec/2023 18:09:25] "GET /api/uploads HTTP/1.1" 200 -
-2023-12-24 18:09:27,585 - 127.0.0.1 - - [24/Dec/2023 18:09:27] "GET /api/results/94fd0393-fa8e-474c-b7b5-95bbae3127ee HTTP/1.1" 200 -
-2023-12-24 18:12:49,310 - 127.0.0.1 - - [24/Dec/2023 18:12:49] "GET /api/results/94fd0393-fa8e-474c-b7b5-95bbae3127ee HTTP/1.1" 200 -
-2023-12-26 22:19:24,773 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2023-12-26 23:06:11,467 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.68.50:5000
-2023-12-26 22:19:24,773 - [33mPress CTRL+C to quit[0m
-2023-12-26 22:19:24,774 -  * Restarting with stat
-2023-12-26 22:19:31,250 -  * Debugger is active!
-2023-12-26 22:19:31,281 -  * Debugger PIN: 706-634-508
-2023-12-26 22:21:31,197 - 127.0.0.1 - - [26/Dec/2023 22:21:31] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:21:31,202 - 127.0.0.1 - - [26/Dec/2023 22:21:31] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:21:32,935 - 127.0.0.1 - - [26/Dec/2023 22:21:32] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:21:32,939 - 127.0.0.1 - - [26/Dec/2023 22:21:32] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:21:50,603 - 127.0.0.1 - - [26/Dec/2023 22:21:50] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:21:50,606 - 127.0.0.1 - - [26/Dec/2023 22:21:50] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:22:09,138 - 127.0.0.1 - - [26/Dec/2023 22:22:09] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:22:09,142 - 127.0.0.1 - - [26/Dec/2023 22:22:09] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:22:11,389 - 127.0.0.1 - - [26/Dec/2023 22:22:11] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:22:11,390 - 127.0.0.1 - - [26/Dec/2023 22:22:11] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:22:16,001 - 127.0.0.1 - - [26/Dec/2023 22:22:16] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:22:16,001 - 127.0.0.1 - - [26/Dec/2023 22:22:16] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:22:59,467 - 127.0.0.1 - - [26/Dec/2023 22:22:59] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:22:59,471 - 127.0.0.1 - - [26/Dec/2023 22:22:59] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:23:09,656 - 127.0.0.1 - - [26/Dec/2023 22:23:09] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:23:09,658 - 127.0.0.1 - - [26/Dec/2023 22:23:09] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:23:12,070 - 127.0.0.1 - - [26/Dec/2023 22:23:12] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:23:12,073 - 127.0.0.1 - - [26/Dec/2023 22:23:12] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:23:15,708 - 127.0.0.1 - - [26/Dec/2023 22:23:15] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:23:15,712 - 127.0.0.1 - - [26/Dec/2023 22:23:15] "[33mGET /api/api/uploads HTTP/1.1[0m" 404 -
-2023-12-26 22:28:55,647 - 127.0.0.1 - - [26/Dec/2023 22:28:55] "GET /api/uploads HTTP/1.1" 200 -
-2023-12-26 22:28:55,651 - 127.0.0.1 - - [26/Dec/2023 22:28:55] "GET /api/uploads HTTP/1.1" 200 -
-2023-12-26 22:29:06,164 - POST - http://0.0.0.0:5000/api/upload - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/cf08d56e-e588-4631-b644-eab67e2922f6/HowtoReduceNighttimeUrination_Dr.AndrewHuberman.mp4 -  8.420949935913086MB
-2023-12-26 22:29:06,169 - 127.0.0.1 - - [26/Dec/2023 22:29:06] "POST /api/upload HTTP/1.1" 200 -
-2023-12-26 22:29:06,184 - POST - http://0.0.0.0:5000/api/model - model request - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/cf08d56e-e588-4631-b644-eab67e2922f6/HowtoReduceNighttimeUrination_Dr.AndrewHuberman.mp4
-2023-12-26 22:29:06,184 - translating - cf08d56e-e588-4631-b644-eab67e2922f6
-2023-12-26 22:33:17,179 - 127.0.0.1 - - [26/Dec/2023 22:33:17] "[31m[1mPOST /api/upload HTTP/1.1[0m" 413 -
-2023-12-26 22:34:40,910 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
-2023-12-26 22:34:45,544 -  * Restarting with stat
-2023-12-26 22:34:51,078 -  * Debugger is active!
-2023-12-26 22:34:51,110 -  * Debugger PIN: 706-634-508
-2023-12-26 22:36:12,637 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
-2023-12-26 22:36:13,118 -  * Restarting with stat
-2023-12-26 22:36:21,091 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2023-12-26 23:06:11,467 - [33mPress CTRL+C to quit[0m
+2023-12-26 23:06:11,468 -  * Restarting with stat
+2023-12-26 23:06:14,567 -  * Debugger is active!
+2023-12-26 23:06:14,586 -  * Debugger PIN: 706-634-508
+2023-12-26 23:06:58,411 - POST - http://0.0.0.0:5000/api/model - model request - /home/python/api/db/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4
+2023-12-26 23:06:58,411 - translating - 7e7fe030-02c7-4481-b1de-b2b607847d7f
+2023-12-26 23:06:58,448 - 127.0.0.1 - - [26/Dec/2023 23:06:58] "[35m[1mPOST /api/model HTTP/1.1[0m" 500 -
+2023-12-26 23:08:33,954 - POST - http://0.0.0.0:5000/api/model - model request - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4
+2023-12-26 23:08:33,954 - translating - 7e7fe030-02c7-4481-b1de-b2b607847d7f
+2023-12-27 02:43:39,862 - translated - 7e7fe030-02c7-4481-b1de-b2b607847d7f - 12905.906249284744 seconds
+2023-12-27 02:43:39,879 - 127.0.0.1 - - [27/Dec/2023 02:43:39] "POST /api/model HTTP/1.1" 200 -
+2023-12-27 06:43:33,257 - 127.0.0.1 - - [27/Dec/2023 06:43:33] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:43:33,266 - 127.0.0.1 - - [27/Dec/2023 06:43:33] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:43:34,461 - 127.0.0.1 - - [27/Dec/2023 06:43:34] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 06:43:34,501 - 127.0.0.1 - - [27/Dec/2023 06:43:34] "[33mGET /captions/vtt/sintel-en.vtt HTTP/1.1[0m" 404 -
+2023-12-27 06:43:34,501 - 127.0.0.1 - - [27/Dec/2023 06:43:34] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 06:43:36,838 - 127.0.0.1 - - [27/Dec/2023 06:43:36] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 06:43:36,846 - 127.0.0.1 - - [27/Dec/2023 06:43:36] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 06:48:17,942 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-27 06:48:18,631 -  * Restarting with stat
+2023-12-27 06:48:24,120 -  * Debugger is active!
+2023-12-27 06:48:24,158 -  * Debugger PIN: 122-689-628
+2023-12-27 06:48:59,674 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-27 06:49:00,134 -  * Restarting with stat
+2023-12-27 06:49:04,007 -  * Debugger is active!
+2023-12-27 06:49:04,034 -  * Debugger PIN: 122-689-628
+2023-12-27 06:49:21,785 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-27 06:49:22,224 -  * Restarting with stat
+2023-12-27 06:49:26,164 -  * Debugger is active!
+2023-12-27 06:49:26,186 -  * Debugger PIN: 122-689-628
+2023-12-27 06:49:37,175 - 127.0.0.1 - - [27/Dec/2023 06:49:37] "[35m[1mGET /api/uploads HTTP/1.1[0m" 500 -
+2023-12-27 06:49:46,338 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-27 06:49:46,731 -  * Restarting with stat
+2023-12-27 06:49:50,663 -  * Debugger is active!
+2023-12-27 06:49:50,692 -  * Debugger PIN: 706-634-508
+2023-12-27 06:49:50,733 - 127.0.0.1 - - [27/Dec/2023 06:49:50] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:51:35,307 - 127.0.0.1 - - [27/Dec/2023 06:51:35] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:52:09,237 - 127.0.0.1 - - [27/Dec/2023 06:52:09] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1" 200 -
+2023-12-27 06:53:15,396 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-27 06:53:15,886 -  * Restarting with stat
+2023-12-27 06:53:19,746 -  * Debugger is active!
+2023-12-27 06:53:19,778 -  * Debugger PIN: 706-634-508
+2023-12-27 06:53:19,823 - 127.0.0.1 - - [27/Dec/2023 06:53:19] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:53:19,830 - 127.0.0.1 - - [27/Dec/2023 06:53:19] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:53:20,705 - 127.0.0.1 - - [27/Dec/2023 06:53:20] "[35m[1mGET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1[0m" 500 -
+2023-12-27 06:53:35,645 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-27 06:53:36,161 -  * Restarting with stat
+2023-12-27 06:53:40,060 -  * Debugger is active!
+2023-12-27 06:53:40,084 -  * Debugger PIN: 706-634-508
+2023-12-27 06:53:40,126 - 127.0.0.1 - - [27/Dec/2023 06:53:40] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:53:40,132 - 127.0.0.1 - - [27/Dec/2023 06:53:40] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:53:43,432 - 127.0.0.1 - - [27/Dec/2023 06:53:43] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 06:53:43,468 - 127.0.0.1 - - [27/Dec/2023 06:53:43] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 06:53:43,472 - 127.0.0.1 - - [27/Dec/2023 06:53:43] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1" 200 -
+2023-12-27 06:53:47,620 - 127.0.0.1 - - [27/Dec/2023 06:53:47] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 06:53:47,625 - 127.0.0.1 - - [27/Dec/2023 06:53:47] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 06:54:23,962 - 127.0.0.1 - - [27/Dec/2023 06:54:23] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:54:23,968 - 127.0.0.1 - - [27/Dec/2023 06:54:23] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:54:25,059 - 127.0.0.1 - - [27/Dec/2023 06:54:25] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 06:54:25,081 - 127.0.0.1 - - [27/Dec/2023 06:54:25] "[36mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1[0m" 304 -
+2023-12-27 06:54:27,448 - 127.0.0.1 - - [27/Dec/2023 06:54:27] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 06:54:52,503 - 127.0.0.1 - - [27/Dec/2023 06:54:52] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:54:52,511 - 127.0.0.1 - - [27/Dec/2023 06:54:52] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:54:55,345 - 127.0.0.1 - - [27/Dec/2023 06:54:55] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 06:54:55,372 - 127.0.0.1 - - [27/Dec/2023 06:54:55] "[36mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1[0m" 304 -
+2023-12-27 06:55:23,530 - 127.0.0.1 - - [27/Dec/2023 06:55:23] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1" 200 -
+2023-12-27 06:55:36,175 - 127.0.0.1 - - [27/Dec/2023 06:55:36] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:55:36,181 - 127.0.0.1 - - [27/Dec/2023 06:55:36] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:55:37,245 - 127.0.0.1 - - [27/Dec/2023 06:55:37] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 06:55:37,271 - 127.0.0.1 - - [27/Dec/2023 06:55:37] "[36mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1[0m" 304 -
+2023-12-27 06:56:27,103 - 127.0.0.1 - - [27/Dec/2023 06:56:27] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:56:27,110 - 127.0.0.1 - - [27/Dec/2023 06:56:27] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:56:27,952 - 127.0.0.1 - - [27/Dec/2023 06:56:27] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 06:56:27,984 - 127.0.0.1 - - [27/Dec/2023 06:56:27] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 06:56:27,985 - 127.0.0.1 - - [27/Dec/2023 06:56:27] "[36mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1[0m" 304 -
+2023-12-27 06:56:30,326 - 127.0.0.1 - - [27/Dec/2023 06:56:30] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 06:56:30,331 - 127.0.0.1 - - [27/Dec/2023 06:56:30] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 06:56:59,556 - 127.0.0.1 - - [27/Dec/2023 06:56:59] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:56:59,565 - 127.0.0.1 - - [27/Dec/2023 06:56:59] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:57:15,379 - 127.0.0.1 - - [27/Dec/2023 06:57:15] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 06:57:15,407 - 127.0.0.1 - - [27/Dec/2023 06:57:15] "[36mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1[0m" 304 -
+2023-12-27 06:57:16,682 - 127.0.0.1 - - [27/Dec/2023 06:57:16] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 06:58:48,227 - 127.0.0.1 - - [27/Dec/2023 06:58:48] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:58:48,232 - 127.0.0.1 - - [27/Dec/2023 06:58:48] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 06:58:49,287 - 127.0.0.1 - - [27/Dec/2023 06:58:49] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 06:58:49,308 - 127.0.0.1 - - [27/Dec/2023 06:58:49] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 06:58:49,320 - 127.0.0.1 - - [27/Dec/2023 06:58:49] "[36mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1[0m" 304 -
+2023-12-27 06:58:50,600 - 127.0.0.1 - - [27/Dec/2023 06:58:50] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 06:58:50,606 - 127.0.0.1 - - [27/Dec/2023 06:58:50] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 06:58:50,616 - 127.0.0.1 - - [27/Dec/2023 06:58:50] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:00:17,095 - 127.0.0.1 - - [27/Dec/2023 07:00:17] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:00:17,101 - 127.0.0.1 - - [27/Dec/2023 07:00:17] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:00:18,296 - 127.0.0.1 - - [27/Dec/2023 07:00:18] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 07:00:18,324 - 127.0.0.1 - - [27/Dec/2023 07:00:18] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:00:20,824 - 127.0.0.1 - - [27/Dec/2023 07:00:20] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:00:20,830 - 127.0.0.1 - - [27/Dec/2023 07:00:20] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:00:22,671 - 127.0.0.1 - - [27/Dec/2023 07:00:22] "[36mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1[0m" 304 -
+2023-12-27 07:01:01,031 - 127.0.0.1 - - [27/Dec/2023 07:01:01] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:01:01,036 - 127.0.0.1 - - [27/Dec/2023 07:01:01] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:01:02,192 - 127.0.0.1 - - [27/Dec/2023 07:01:02] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 07:01:04,605 - 127.0.0.1 - - [27/Dec/2023 07:01:04] "[36mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1[0m" 304 -
+2023-12-27 07:02:39,829 - 127.0.0.1 - - [27/Dec/2023 07:02:39] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:02:39,836 - 127.0.0.1 - - [27/Dec/2023 07:02:39] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:03:12,988 - 127.0.0.1 - - [27/Dec/2023 07:03:12] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:03:12,996 - 127.0.0.1 - - [27/Dec/2023 07:03:12] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:03:13,597 - 127.0.0.1 - - [27/Dec/2023 07:03:13] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 07:03:13,621 - 127.0.0.1 - - [27/Dec/2023 07:03:13] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:03:28,761 - 127.0.0.1 - - [27/Dec/2023 07:03:28] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:03:28,767 - 127.0.0.1 - - [27/Dec/2023 07:03:28] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:03:29,775 - 127.0.0.1 - - [27/Dec/2023 07:03:29] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 07:03:41,352 - 127.0.0.1 - - [27/Dec/2023 07:03:41] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:03:41,357 - 127.0.0.1 - - [27/Dec/2023 07:03:41] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:03:42,490 - 127.0.0.1 - - [27/Dec/2023 07:03:42] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 07:03:46,074 - 127.0.0.1 - - [27/Dec/2023 07:03:46] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:05:44,517 - 127.0.0.1 - - [27/Dec/2023 07:05:44] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:05:44,526 - 127.0.0.1 - - [27/Dec/2023 07:05:44] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:05:45,471 - 127.0.0.1 - - [27/Dec/2023 07:05:45] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 07:05:45,511 - 127.0.0.1 - - [27/Dec/2023 07:05:45] "[36mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1[0m" 304 -
+2023-12-27 07:05:45,512 - 127.0.0.1 - - [27/Dec/2023 07:05:45] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:05:45,518 - 127.0.0.1 - - [27/Dec/2023 07:05:45] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:06:12,234 - 127.0.0.1 - - [27/Dec/2023 07:06:12] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:06:12,239 - 127.0.0.1 - - [27/Dec/2023 07:06:12] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:06:12,730 - 127.0.0.1 - - [27/Dec/2023 07:06:12] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 07:06:12,768 - 127.0.0.1 - - [27/Dec/2023 07:06:12] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:06:12,769 - 127.0.0.1 - - [27/Dec/2023 07:06:12] "[36mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1[0m" 304 -
+2023-12-27 07:06:24,574 - 127.0.0.1 - - [27/Dec/2023 07:06:24] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:06:28,223 - 127.0.0.1 - - [27/Dec/2023 07:06:28] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:06:28,232 - 127.0.0.1 - - [27/Dec/2023 07:06:28] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:06:29,259 - 127.0.0.1 - - [27/Dec/2023 07:06:29] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 07:06:29,286 - 127.0.0.1 - - [27/Dec/2023 07:06:29] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:06:29,287 - 127.0.0.1 - - [27/Dec/2023 07:06:29] "[36mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1[0m" 304 -
+2023-12-27 07:06:29,292 - 127.0.0.1 - - [27/Dec/2023 07:06:29] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:10:27,683 - 127.0.0.1 - - [27/Dec/2023 07:10:27] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:10:27,688 - 127.0.0.1 - - [27/Dec/2023 07:10:27] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:10:28,369 - 127.0.0.1 - - [27/Dec/2023 07:10:28] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 07:10:28,406 - 127.0.0.1 - - [27/Dec/2023 07:10:28] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:10:35,021 - 127.0.0.1 - - [27/Dec/2023 07:10:35] "[36mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1[0m" 304 -
+2023-12-27 07:11:33,010 - 127.0.0.1 - - [27/Dec/2023 07:11:33] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:11:33,017 - 127.0.0.1 - - [27/Dec/2023 07:11:33] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:11:33,891 - 127.0.0.1 - - [27/Dec/2023 07:11:33] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 07:11:33,928 - 127.0.0.1 - - [27/Dec/2023 07:11:33] "[36mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1[0m" 304 -
+2023-12-27 07:11:33,939 - 127.0.0.1 - - [27/Dec/2023 07:11:33] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:11:33,946 - 127.0.0.1 - - [27/Dec/2023 07:11:33] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:15:37,795 - 127.0.0.1 - - [27/Dec/2023 07:15:37] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:15:37,805 - 127.0.0.1 - - [27/Dec/2023 07:15:37] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:15:40,035 - 127.0.0.1 - - [27/Dec/2023 07:15:40] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 07:15:40,069 - 127.0.0.1 - - [27/Dec/2023 07:15:40] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:15:40,070 - 127.0.0.1 - - [27/Dec/2023 07:15:40] "[36mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1[0m" 304 -
+2023-12-27 07:16:04,832 - 127.0.0.1 - - [27/Dec/2023 07:16:04] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:16:04,836 - 127.0.0.1 - - [27/Dec/2023 07:16:04] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:17:18,356 - 127.0.0.1 - - [27/Dec/2023 07:17:18] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:17:18,361 - 127.0.0.1 - - [27/Dec/2023 07:17:18] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:17:20,039 - 127.0.0.1 - - [27/Dec/2023 07:17:20] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 07:17:20,069 - 127.0.0.1 - - [27/Dec/2023 07:17:20] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-27 07:17:20,071 - 127.0.0.1 - - [27/Dec/2023 07:17:20] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1" 200 -
+2023-12-27 07:17:58,328 - 127.0.0.1 - - [27/Dec/2023 07:17:58] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:17:58,341 - 127.0.0.1 - - [27/Dec/2023 07:17:58] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-27 07:17:59,404 - 127.0.0.1 - - [27/Dec/2023 07:17:59] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-27 07:17:59,442 - 127.0.0.1 - - [27/Dec/2023 07:17:59] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f/captions.srt HTTP/1.1" 200 -
+2023-12-28 16:24:23,527 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:24:24,095 -  * Restarting with stat
+2023-12-28 16:24:32,532 -  * Debugger is active!
+2023-12-28 16:24:32,557 -  * Debugger PIN: 706-634-508
+2023-12-28 16:24:38,616 - 127.0.0.1 - - [28/Dec/2023 16:24:38] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 16:24:38,622 - 127.0.0.1 - - [28/Dec/2023 16:24:38] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 16:25:20,830 - 127.0.0.1 - - [28/Dec/2023 16:25:20] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:25:20,868 - 127.0.0.1 - - [28/Dec/2023 16:25:20] "[33mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1[0m" 404 -
+2023-12-28 16:25:20,871 - 127.0.0.1 - - [28/Dec/2023 16:25:20] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 16:26:00,145 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:26:01,145 -  * Restarting with stat
+2023-12-28 16:26:05,461 -  * Debugger is active!
+2023-12-28 16:26:05,492 -  * Debugger PIN: 706-634-508
+2023-12-28 16:28:44,138 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:28:44,662 -  * Restarting with stat
+2023-12-28 16:28:48,944 -  * Debugger is active!
+2023-12-28 16:28:48,968 -  * Debugger PIN: 706-634-508
+2023-12-28 16:28:49,010 - 127.0.0.1 - - [28/Dec/2023 16:28:49] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 16:28:49,016 - 127.0.0.1 - - [28/Dec/2023 16:28:49] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 16:28:50,814 - 127.0.0.1 - - [28/Dec/2023 16:28:50] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:28:50,848 - 127.0.0.1 - - [28/Dec/2023 16:28:50] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 16:28:50,849 - 127.0.0.1 - - [28/Dec/2023 16:28:50] "[35m[1mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1[0m" 500 -
+2023-12-28 16:28:50,851 - 127.0.0.1 - - [28/Dec/2023 16:28:50] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 16:29:24,278 - 127.0.0.1 - - [28/Dec/2023 16:29:24] "[35m[1mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1[0m" 500 -
+2023-12-28 16:29:40,367 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
- * Running on http://192.168.68.50:5000
-2023-12-26 22:36:21,092 - [33mPress CTRL+C to quit[0m
-2023-12-26 22:36:21,092 -  * Restarting with stat
-2023-12-26 22:36:25,045 -  * Debugger is active!
-2023-12-26 22:36:25,067 -  * Debugger PIN: 706-634-508
-2023-12-26 22:36:30,048 - 127.0.0.1 - - [26/Dec/2023 22:36:30] "GET /api/uploads HTTP/1.1" 200 -
-2023-12-26 22:36:30,054 - 127.0.0.1 - - [26/Dec/2023 22:36:30] "GET /api/uploads HTTP/1.1" 200 -
-2023-12-26 22:36:30,065 - POST - http://0.0.0.0:5000/api/model - model request - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/cf08d56e-e588-4631-b644-eab67e2922f6/HowtoReduceNighttimeUrination_Dr.AndrewHuberman.mp4
-2023-12-26 22:36:30,066 - translating - cf08d56e-e588-4631-b644-eab67e2922f6
-2023-12-26 22:36:30,084 - POST - http://0.0.0.0:5000/api/model - model request - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/cf08d56e-e588-4631-b644-eab67e2922f6/HowtoReduceNighttimeUrination_Dr.AndrewHuberman.mp4
-2023-12-26 22:36:30,084 - translating - cf08d56e-e588-4631-b644-eab67e2922f6
-2023-12-26 22:36:41,410 - POST - http://0.0.0.0:5000/api/upload - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/a348a8a0-92fd-4ff5-98e8-7e3d5a606861/Aqui_Vive_Gente.mp4 -  67.41082191467285MB
-2023-12-26 22:36:41,413 - 127.0.0.1 - - [26/Dec/2023 22:36:41] "POST /api/upload HTTP/1.1" 200 -
-2023-12-26 22:36:41,432 - POST - http://0.0.0.0:5000/api/model - model request - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/a348a8a0-92fd-4ff5-98e8-7e3d5a606861/Aqui_Vive_Gente.mp4
-2023-12-26 22:36:41,432 - translating - a348a8a0-92fd-4ff5-98e8-7e3d5a606861
-2023-12-26 22:37:36,098 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
- * Running on http://192.168.68.50:5000
-2023-12-26 22:37:36,098 - [33mPress CTRL+C to quit[0m
-2023-12-26 22:37:36,098 -  * Restarting with stat
-2023-12-26 22:37:39,843 -  * Debugger is active!
-2023-12-26 22:37:39,871 -  * Debugger PIN: 706-634-508
-2023-12-26 22:43:29,052 - 127.0.0.1 - - [26/Dec/2023 22:43:29] "GET /api/uploads HTTP/1.1" 200 -
-2023-12-26 22:43:29,055 - 127.0.0.1 - - [26/Dec/2023 22:43:29] "GET /api/uploads HTTP/1.1" 200 -
-2023-12-26 22:43:30,334 - 127.0.0.1 - - [26/Dec/2023 22:43:30] "GET /api/uploads HTTP/1.1" 200 -
-2023-12-26 22:43:30,340 - 127.0.0.1 - - [26/Dec/2023 22:43:30] "GET /api/uploads HTTP/1.1" 200 -
-2023-12-26 22:43:31,817 - 127.0.0.1 - - [26/Dec/2023 22:43:31] "GET /api/uploads HTTP/1.1" 200 -
-2023-12-26 22:43:31,822 - 127.0.0.1 - - [26/Dec/2023 22:43:31] "GET /api/uploads HTTP/1.1" 200 -
-2023-12-26 22:43:34,395 - 127.0.0.1 - - [26/Dec/2023 22:43:34] "GET /api/uploads HTTP/1.1" 200 -
-2023-12-26 22:43:34,399 - 127.0.0.1 - - [26/Dec/2023 22:43:34] "GET /api/uploads HTTP/1.1" 200 -
-2023-12-26 22:43:38,823 - POST - http://0.0.0.0:5000/api/upload - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 -  67.41082191467285MB
-2023-12-26 22:43:38,824 - 127.0.0.1 - - [26/Dec/2023 22:43:38] "POST /api/upload HTTP/1.1" 200 -
-2023-12-26 22:43:38,835 - POST - http://0.0.0.0:5000/api/model - model request - /Users/adavila/Documents/andres/github/whisper/whisper-api/api/db/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4
-2023-12-26 22:43:38,835 - translating - 7e7fe030-02c7-4481-b1de-b2b607847d7f
+2023-12-28 16:29:40,367 - [33mPress CTRL+C to quit[0m
+2023-12-28 16:29:40,368 -  * Restarting with stat
+2023-12-28 16:29:47,225 -  * Debugger is active!
+2023-12-28 16:29:47,239 -  * Debugger PIN: 706-634-508
+2023-12-28 16:29:47,285 - 127.0.0.1 - - [28/Dec/2023 16:29:47] "[35m[1mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1[0m" 500 -
+2023-12-28 16:29:57,733 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:29:58,780 -  * Restarting with stat
+2023-12-28 16:30:03,218 -  * Debugger is active!
+2023-12-28 16:30:03,249 -  * Debugger PIN: 706-634-508
+2023-12-28 16:30:03,297 - 127.0.0.1 - - [28/Dec/2023 16:30:03] "[35m[1mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1[0m" 500 -
+2023-12-28 16:30:10,613 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:30:11,159 -  * Restarting with stat
+2023-12-28 16:30:15,209 -  * Debugger is active!
+2023-12-28 16:30:15,247 -  * Debugger PIN: 706-634-508
+2023-12-28 16:30:15,301 - 127.0.0.1 - - [28/Dec/2023 16:30:15] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:30:49,734 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:30:50,239 -  * Restarting with stat
+2023-12-28 16:30:54,413 -  * Debugger is active!
+2023-12-28 16:30:54,442 -  * Debugger PIN: 706-634-508
+2023-12-28 16:30:54,489 - 127.0.0.1 - - [28/Dec/2023 16:30:54] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:31:07,029 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:31:07,620 -  * Restarting with stat
+2023-12-28 16:31:11,776 -  * Debugger is active!
+2023-12-28 16:31:11,802 -  * Debugger PIN: 706-634-508
+2023-12-28 16:34:44,602 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:34:45,118 -  * Restarting with stat
+2023-12-28 16:34:49,295 -  * Debugger is active!
+2023-12-28 16:34:49,326 -  * Debugger PIN: 706-634-508
+2023-12-28 16:34:49,933 - 127.0.0.1 - - [28/Dec/2023 16:34:49] "[35m[1mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1[0m" 500 -
+2023-12-28 16:34:57,749 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:34:58,691 -  * Restarting with stat
+2023-12-28 16:35:02,863 -  * Debugger is active!
+2023-12-28 16:35:02,894 -  * Debugger PIN: 706-634-508
+2023-12-28 16:35:02,935 - 127.0.0.1 - - [28/Dec/2023 16:35:02] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:35:12,313 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:35:12,803 -  * Restarting with stat
+2023-12-28 16:35:16,875 -  * Debugger is active!
+2023-12-28 16:35:16,901 -  * Debugger PIN: 706-634-508
+2023-12-28 16:35:20,236 - 127.0.0.1 - - [28/Dec/2023 16:35:20] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:37:43,136 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:37:43,630 -  * Restarting with stat
+2023-12-28 16:37:47,884 -  * Debugger is active!
+2023-12-28 16:37:47,913 -  * Debugger PIN: 706-634-508
+2023-12-28 16:38:02,539 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:38:03,070 -  * Restarting with stat
+2023-12-28 16:38:07,068 -  * Debugger is active!
+2023-12-28 16:38:07,094 -  * Debugger PIN: 706-634-508
+2023-12-28 16:38:07,142 - 127.0.0.1 - - [28/Dec/2023 16:38:07] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:38:16,507 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:38:17,099 -  * Restarting with stat
+2023-12-28 16:38:21,092 -  * Debugger is active!
+2023-12-28 16:38:21,113 -  * Debugger PIN: 706-634-508
+2023-12-28 16:38:21,151 - 127.0.0.1 - - [28/Dec/2023 16:38:21] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:38:58,748 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:38:59,225 -  * Restarting with stat
+2023-12-28 16:39:03,173 -  * Debugger is active!
+2023-12-28 16:39:03,203 -  * Debugger PIN: 706-634-508
+2023-12-28 16:39:03,247 - 127.0.0.1 - - [28/Dec/2023 16:39:03] "[35m[1mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1[0m" 500 -
+2023-12-28 16:39:23,016 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:39:23,606 -  * Restarting with stat
+2023-12-28 16:39:27,488 -  * Debugger is active!
+2023-12-28 16:39:27,515 -  * Debugger PIN: 706-634-508
+2023-12-28 16:39:45,169 - 127.0.0.1 - - [28/Dec/2023 16:39:45] "[35m[1mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1[0m" 500 -
+2023-12-28 16:39:52,647 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:39:53,208 -  * Restarting with stat
+2023-12-28 16:39:57,319 -  * Debugger is active!
+2023-12-28 16:39:57,347 -  * Debugger PIN: 706-634-508
+2023-12-28 16:39:57,390 - 127.0.0.1 - - [28/Dec/2023 16:39:57] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:44:00,926 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:44:01,522 -  * Restarting with stat
+2023-12-28 16:44:07,453 -  * Debugger is active!
+2023-12-28 16:44:07,469 -  * Debugger PIN: 706-634-508
+2023-12-28 16:44:24,165 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:44:25,181 -  * Restarting with stat
+2023-12-28 16:44:29,606 -  * Debugger is active!
+2023-12-28 16:44:29,637 -  * Debugger PIN: 706-634-508
+2023-12-28 16:44:29,677 - 127.0.0.1 - - [28/Dec/2023 16:44:29] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:45:22,942 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:45:23,681 -  * Restarting with stat
+2023-12-28 16:45:28,084 -  * Debugger is active!
+2023-12-28 16:45:28,110 -  * Debugger PIN: 706-634-508
+2023-12-28 16:45:28,151 - 127.0.0.1 - - [28/Dec/2023 16:45:28] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:46:06,012 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:46:06,686 -  * Restarting with stat
+2023-12-28 16:46:12,234 -  * Debugger is active!
+2023-12-28 16:46:12,256 -  * Debugger PIN: 706-634-508
+2023-12-28 16:46:12,301 - 127.0.0.1 - - [28/Dec/2023 16:46:12] "[35m[1mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1[0m" 500 -
+2023-12-28 16:47:20,426 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:47:21,180 -  * Restarting with stat
+2023-12-28 16:47:25,599 -  * Debugger is active!
+2023-12-28 16:47:25,624 -  * Debugger PIN: 706-634-508
+2023-12-28 16:47:27,423 - 127.0.0.1 - - [28/Dec/2023 16:47:27] "[35m[1mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1[0m" 500 -
+2023-12-28 16:47:48,734 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:47:49,345 -  * Restarting with stat
+2023-12-28 16:47:53,562 -  * Debugger is active!
+2023-12-28 16:47:53,586 -  * Debugger PIN: 706-634-508
+2023-12-28 16:47:55,986 - 127.0.0.1 - - [28/Dec/2023 16:47:55] "[35m[1mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1[0m" 500 -
+2023-12-28 16:48:05,128 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:48:05,937 -  * Restarting with stat
+2023-12-28 16:48:10,164 -  * Debugger is active!
+2023-12-28 16:48:10,190 -  * Debugger PIN: 706-634-508
+2023-12-28 16:48:10,233 - 127.0.0.1 - - [28/Dec/2023 16:48:10] "[35m[1mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1[0m" 500 -
+2023-12-28 16:48:30,059 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:48:30,702 -  * Restarting with stat
+2023-12-28 16:48:35,019 -  * Debugger is active!
+2023-12-28 16:48:35,043 -  * Debugger PIN: 706-634-508
+2023-12-28 16:48:35,088 - 127.0.0.1 - - [28/Dec/2023 16:48:35] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:50:00,852 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:50:01,469 -  * Restarting with stat
+2023-12-28 16:50:05,725 -  * Debugger is active!
+2023-12-28 16:50:05,761 -  * Debugger PIN: 706-634-508
+2023-12-28 16:50:51,260 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:50:51,890 -  * Restarting with stat
+2023-12-28 16:50:56,319 -  * Debugger is active!
+2023-12-28 16:50:56,354 -  * Debugger PIN: 706-634-508
+2023-12-28 16:50:56,405 - 127.0.0.1 - - [28/Dec/2023 16:50:56] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:51:08,944 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:51:09,748 -  * Restarting with stat
+2023-12-28 16:51:13,878 -  * Debugger is active!
+2023-12-28 16:51:13,906 -  * Debugger PIN: 706-634-508
+2023-12-28 16:51:13,948 - 127.0.0.1 - - [28/Dec/2023 16:51:13] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:52:00,042 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:52:00,600 -  * Restarting with stat
+2023-12-28 16:52:04,559 -  * Debugger is active!
+2023-12-28 16:52:04,584 -  * Debugger PIN: 706-634-508
+2023-12-28 16:52:04,627 - 127.0.0.1 - - [28/Dec/2023 16:52:04] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:52:10,525 - 127.0.0.1 - - [28/Dec/2023 16:52:10] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:52:56,733 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:52:57,358 -  * Restarting with stat
+2023-12-28 16:53:01,807 -  * Debugger is active!
+2023-12-28 16:53:01,837 -  * Debugger PIN: 706-634-508
+2023-12-28 16:53:01,881 - 127.0.0.1 - - [28/Dec/2023 16:53:01] "[35m[1mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1[0m" 500 -
+2023-12-28 16:53:12,340 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:53:12,889 -  * Restarting with stat
+2023-12-28 16:53:16,776 -  * Debugger is active!
+2023-12-28 16:53:16,803 -  * Debugger PIN: 706-634-508
+2023-12-28 16:53:16,844 - 127.0.0.1 - - [28/Dec/2023 16:53:16] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:53:31,495 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:53:32,047 -  * Restarting with stat
+2023-12-28 16:53:33,209 -  * Restarting with stat
+2023-12-28 16:53:37,199 -  * Debugger is active!
+2023-12-28 16:53:37,228 -  * Debugger PIN: 706-634-508
+2023-12-28 16:53:37,269 - 127.0.0.1 - - [28/Dec/2023 16:53:37] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:54:09,644 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:54:10,299 -  * Restarting with stat
+2023-12-28 16:54:14,334 -  * Debugger is active!
+2023-12-28 16:54:14,363 -  * Debugger PIN: 706-634-508
+2023-12-28 16:54:14,406 - 127.0.0.1 - - [28/Dec/2023 16:54:14] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:55:17,056 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:55:17,682 -  * Restarting with stat
+2023-12-28 16:55:21,748 -  * Debugger is active!
+2023-12-28 16:55:21,771 -  * Debugger PIN: 706-634-508
+2023-12-28 16:55:21,808 - 127.0.0.1 - - [28/Dec/2023 16:55:21] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:57:31,904 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:57:32,570 -  * Restarting with stat
+2023-12-28 16:57:38,032 -  * Debugger is active!
+2023-12-28 16:57:38,058 -  * Debugger PIN: 706-634-508
+2023-12-28 16:57:38,100 - 127.0.0.1 - - [28/Dec/2023 16:57:38] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 16:57:55,892 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 16:57:56,717 -  * Restarting with stat
+2023-12-28 16:58:01,036 -  * Debugger is active!
+2023-12-28 16:58:01,075 -  * Debugger PIN: 706-634-508
+2023-12-28 16:58:01,122 - 127.0.0.1 - - [28/Dec/2023 16:58:01] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:10:45,140 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:10:45,876 -  * Restarting with stat
+2023-12-28 17:10:50,814 -  * Debugger is active!
+2023-12-28 17:10:50,844 -  * Debugger PIN: 706-634-508
+2023-12-28 17:10:50,884 - 127.0.0.1 - - [28/Dec/2023 17:10:50] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:10:57,171 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:10:57,880 -  * Restarting with stat
+2023-12-28 17:11:02,266 -  * Debugger is active!
+2023-12-28 17:11:02,377 -  * Debugger PIN: 706-634-508
+2023-12-28 17:11:02,424 - 127.0.0.1 - - [28/Dec/2023 17:11:02] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:11:12,868 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:11:13,835 -  * Restarting with stat
+2023-12-28 17:11:18,231 -  * Debugger is active!
+2023-12-28 17:11:18,260 -  * Debugger PIN: 706-634-508
+2023-12-28 17:11:18,304 - 127.0.0.1 - - [28/Dec/2023 17:11:18] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:11:25,633 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:11:26,290 -  * Restarting with stat
+2023-12-28 17:11:30,236 -  * Debugger is active!
+2023-12-28 17:11:30,264 -  * Debugger PIN: 706-634-508
+2023-12-28 17:11:30,305 - 127.0.0.1 - - [28/Dec/2023 17:11:30] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:11:59,623 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:12:00,161 -  * Restarting with stat
+2023-12-28 17:12:03,933 -  * Debugger is active!
+2023-12-28 17:12:03,962 -  * Debugger PIN: 706-634-508
+2023-12-28 17:12:09,225 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:12:09,803 -  * Restarting with stat
+2023-12-28 17:12:13,830 -  * Debugger is active!
+2023-12-28 17:12:13,858 -  * Debugger PIN: 706-634-508
+2023-12-28 17:12:13,899 - 127.0.0.1 - - [28/Dec/2023 17:12:13] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:40:20,063 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:40:20,737 -  * Restarting with stat
+2023-12-28 17:40:26,340 -  * Debugger is active!
+2023-12-28 17:40:26,371 -  * Debugger PIN: 706-634-508
+2023-12-28 17:40:26,414 - 127.0.0.1 - - [28/Dec/2023 17:40:26] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:46:14,726 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:46:15,429 -  * Restarting with stat
+2023-12-28 17:46:21,531 -  * Debugger is active!
+2023-12-28 17:46:21,563 -  * Debugger PIN: 706-634-508
+2023-12-28 17:46:21,612 - 127.0.0.1 - - [28/Dec/2023 17:46:21] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:46:34,133 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:46:35,015 -  * Restarting with stat
+2023-12-28 17:46:40,417 -  * Debugger is active!
+2023-12-28 17:46:40,447 -  * Debugger PIN: 706-634-508
+2023-12-28 17:46:40,497 - 127.0.0.1 - - [28/Dec/2023 17:46:40] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:48:22,627 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:48:23,578 -  * Restarting with stat
+2023-12-28 17:48:27,845 -  * Debugger is active!
+2023-12-28 17:48:27,879 -  * Debugger PIN: 706-634-508
+2023-12-28 17:48:29,196 - 127.0.0.1 - - [28/Dec/2023 17:48:29] "[35m[1mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1[0m" 500 -
+2023-12-28 17:49:09,794 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:49:10,582 -  * Restarting with stat
+2023-12-28 17:49:14,991 -  * Debugger is active!
+2023-12-28 17:49:15,025 -  * Debugger PIN: 706-634-508
+2023-12-28 17:49:15,076 - 127.0.0.1 - - [28/Dec/2023 17:49:15] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:49:41,185 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:49:41,832 -  * Restarting with stat
+2023-12-28 17:49:46,103 -  * Debugger is active!
+2023-12-28 17:49:46,133 -  * Debugger PIN: 706-634-508
+2023-12-28 17:49:46,179 - 127.0.0.1 - - [28/Dec/2023 17:49:46] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:50:34,086 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:50:34,733 -  * Restarting with stat
+2023-12-28 17:50:38,874 -  * Debugger is active!
+2023-12-28 17:50:38,902 -  * Debugger PIN: 706-634-508
+2023-12-28 17:50:47,327 - 127.0.0.1 - - [28/Dec/2023 17:50:47] "[35m[1mGET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1[0m" 500 -
+2023-12-28 17:50:55,682 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:50:56,336 -  * Restarting with stat
+2023-12-28 17:51:00,384 -  * Debugger is active!
+2023-12-28 17:51:00,406 -  * Debugger PIN: 706-634-508
+2023-12-28 17:51:00,455 - 127.0.0.1 - - [28/Dec/2023 17:51:00] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:51:10,892 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:51:11,502 -  * Restarting with stat
+2023-12-28 17:51:15,476 -  * Debugger is active!
+2023-12-28 17:51:15,509 -  * Debugger PIN: 706-634-508
+2023-12-28 17:51:28,119 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:51:28,675 -  * Restarting with stat
+2023-12-28 17:51:32,578 -  * Debugger is active!
+2023-12-28 17:51:32,604 -  * Debugger PIN: 706-634-508
+2023-12-28 17:51:33,588 - 127.0.0.1 - - [28/Dec/2023 17:51:33] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:51:38,546 - 127.0.0.1 - - [28/Dec/2023 17:51:38] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:51:44,130 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:51:44,690 -  * Restarting with stat
+2023-12-28 17:51:48,758 -  * Debugger is active!
+2023-12-28 17:51:48,785 -  * Debugger PIN: 706-634-508
+2023-12-28 17:52:21,109 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:52:21,713 -  * Restarting with stat
+2023-12-28 17:52:25,902 -  * Debugger is active!
+2023-12-28 17:52:25,930 -  * Debugger PIN: 706-634-508
+2023-12-28 17:52:25,974 - 127.0.0.1 - - [28/Dec/2023 17:52:25] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:52:32,263 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:52:32,851 -  * Restarting with stat
+2023-12-28 17:52:36,867 -  * Debugger is active!
+2023-12-28 17:52:36,897 -  * Debugger PIN: 706-634-508
+2023-12-28 17:53:02,949 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:53:03,466 -  * Restarting with stat
+2023-12-28 17:53:07,359 -  * Debugger is active!
+2023-12-28 17:53:07,390 -  * Debugger PIN: 706-634-508
+2023-12-28 17:53:07,859 - 127.0.0.1 - - [28/Dec/2023 17:53:07] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:53:20,698 - 127.0.0.1 - - [28/Dec/2023 17:53:20] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:53:20,710 - 127.0.0.1 - - [28/Dec/2023 17:53:20] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:53:22,763 - 127.0.0.1 - - [28/Dec/2023 17:53:22] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:53:22,803 - 127.0.0.1 - - [28/Dec/2023 17:53:22] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 17:53:22,803 - 127.0.0.1 - - [28/Dec/2023 17:53:22] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:53:51,699 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:53:52,296 -  * Restarting with stat
+2023-12-28 17:53:56,982 -  * Debugger is active!
+2023-12-28 17:53:57,030 -  * Debugger PIN: 706-634-508
+2023-12-28 17:53:57,085 - 127.0.0.1 - - [28/Dec/2023 17:53:57] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:53:57,095 - 127.0.0.1 - - [28/Dec/2023 17:53:57] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:53:57,640 - 127.0.0.1 - - [28/Dec/2023 17:53:57] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:53:57,708 - 127.0.0.1 - - [28/Dec/2023 17:53:57] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:54:03,750 - 127.0.0.1 - - [28/Dec/2023 17:54:03] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 17:54:03,756 - 127.0.0.1 - - [28/Dec/2023 17:54:03] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 17:54:13,074 - 127.0.0.1 - - [28/Dec/2023 17:54:13] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:54:13,083 - 127.0.0.1 - - [28/Dec/2023 17:54:13] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:54:30,840 - 127.0.0.1 - - [28/Dec/2023 17:54:30] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:54:30,846 - 127.0.0.1 - - [28/Dec/2023 17:54:30] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:54:33,227 - 127.0.0.1 - - [28/Dec/2023 17:54:33] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:54:33,264 - 127.0.0.1 - - [28/Dec/2023 17:54:33] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 17:54:33,269 - 127.0.0.1 - - [28/Dec/2023 17:54:33] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:55:15,011 - 127.0.0.1 - - [28/Dec/2023 17:55:15] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:55:15,016 - 127.0.0.1 - - [28/Dec/2023 17:55:15] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:55:15,826 - 127.0.0.1 - - [28/Dec/2023 17:55:15] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:55:15,868 - 127.0.0.1 - - [28/Dec/2023 17:55:15] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:55:38,120 - 127.0.0.1 - - [28/Dec/2023 17:55:38] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:55:38,125 - 127.0.0.1 - - [28/Dec/2023 17:55:38] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:55:39,577 - 127.0.0.1 - - [28/Dec/2023 17:55:39] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:55:39,617 - 127.0.0.1 - - [28/Dec/2023 17:55:39] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:55:51,056 - 127.0.0.1 - - [28/Dec/2023 17:55:51] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 17:55:51,062 - 127.0.0.1 - - [28/Dec/2023 17:55:51] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 17:56:42,896 - 127.0.0.1 - - [28/Dec/2023 17:56:42] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:56:42,907 - 127.0.0.1 - - [28/Dec/2023 17:56:42] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:56:43,837 - 127.0.0.1 - - [28/Dec/2023 17:56:43] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:56:43,878 - 127.0.0.1 - - [28/Dec/2023 17:56:43] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 17:56:43,881 - 127.0.0.1 - - [28/Dec/2023 17:56:43] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:57:00,341 - 127.0.0.1 - - [28/Dec/2023 17:57:00] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:57:00,350 - 127.0.0.1 - - [28/Dec/2023 17:57:00] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:57:04,084 - 127.0.0.1 - - [28/Dec/2023 17:57:04] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:57:04,118 - 127.0.0.1 - - [28/Dec/2023 17:57:04] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:57:31,148 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/util.py', reloading
+2023-12-28 17:57:31,870 -  * Restarting with stat
+2023-12-28 17:57:37,416 -  * Debugger is active!
+2023-12-28 17:57:37,447 -  * Debugger PIN: 706-634-508
+2023-12-28 17:57:42,709 - 127.0.0.1 - - [28/Dec/2023 17:57:42] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:57:53,197 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:57:53,978 -  * Restarting with stat
+2023-12-28 17:57:58,400 -  * Debugger is active!
+2023-12-28 17:57:58,431 -  * Debugger PIN: 706-634-508
+2023-12-28 17:57:58,480 - 127.0.0.1 - - [28/Dec/2023 17:57:58] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:58:01,747 - 127.0.0.1 - - [28/Dec/2023 17:58:01] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:58:01,757 - 127.0.0.1 - - [28/Dec/2023 17:58:01] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:58:02,469 - 127.0.0.1 - - [28/Dec/2023 17:58:02] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:58:02,504 - 127.0.0.1 - - [28/Dec/2023 17:58:02] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 17:58:02,505 - 127.0.0.1 - - [28/Dec/2023 17:58:02] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:58:02,508 - 127.0.0.1 - - [28/Dec/2023 17:58:02] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 17:59:06,129 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:59:07,036 -  * Restarting with stat
+2023-12-28 17:59:12,779 -  * Debugger is active!
+2023-12-28 17:59:12,799 -  * Debugger PIN: 706-634-508
+2023-12-28 17:59:12,847 - 127.0.0.1 - - [28/Dec/2023 17:59:12] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:59:23,316 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 17:59:24,238 -  * Restarting with stat
+2023-12-28 17:59:28,577 -  * Debugger is active!
+2023-12-28 17:59:28,610 -  * Debugger PIN: 706-634-508
+2023-12-28 17:59:28,663 - 127.0.0.1 - - [28/Dec/2023 17:59:28] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:59:31,061 - 127.0.0.1 - - [28/Dec/2023 17:59:31] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:59:31,075 - 127.0.0.1 - - [28/Dec/2023 17:59:31] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 17:59:31,827 - 127.0.0.1 - - [28/Dec/2023 17:59:31] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 17:59:31,858 - 127.0.0.1 - - [28/Dec/2023 17:59:31] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 17:59:31,862 - 127.0.0.1 - - [28/Dec/2023 17:59:31] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:00:53,552 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 18:00:54,598 -  * Restarting with stat
+2023-12-28 18:00:59,967 -  * Debugger is active!
+2023-12-28 18:00:59,994 -  * Debugger PIN: 706-634-508
+2023-12-28 18:01:00,044 - 127.0.0.1 - - [28/Dec/2023 18:01:00] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:01:24,247 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 18:01:25,141 -  * Restarting with stat
+2023-12-28 18:01:30,111 -  * Debugger is active!
+2023-12-28 18:01:30,131 -  * Debugger PIN: 706-634-508
+2023-12-28 18:01:30,179 - 127.0.0.1 - - [28/Dec/2023 18:01:30] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:01:46,948 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 18:01:47,734 -  * Restarting with stat
+2023-12-28 18:01:51,877 -  * Debugger is active!
+2023-12-28 18:01:51,900 -  * Debugger PIN: 706-634-508
+2023-12-28 18:01:51,951 - 127.0.0.1 - - [28/Dec/2023 18:01:51] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:02:09,790 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 18:02:10,688 -  * Restarting with stat
+2023-12-28 18:02:15,217 -  * Debugger is active!
+2023-12-28 18:02:15,241 -  * Debugger PIN: 706-634-508
+2023-12-28 18:02:15,289 - 127.0.0.1 - - [28/Dec/2023 18:02:15] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:02:29,894 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 18:02:30,873 -  * Restarting with stat
+2023-12-28 18:02:35,188 -  * Debugger is active!
+2023-12-28 18:02:35,219 -  * Debugger PIN: 706-634-508
+2023-12-28 18:02:35,270 - 127.0.0.1 - - [28/Dec/2023 18:02:35] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:02:46,265 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 18:02:47,203 -  * Restarting with stat
+2023-12-28 18:02:51,431 -  * Debugger is active!
+2023-12-28 18:02:51,452 -  * Debugger PIN: 706-634-508
+2023-12-28 18:02:51,496 - 127.0.0.1 - - [28/Dec/2023 18:02:51] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:02:58,856 - 127.0.0.1 - - [28/Dec/2023 18:02:58] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 18:02:58,866 - 127.0.0.1 - - [28/Dec/2023 18:02:58] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 18:02:59,595 - 127.0.0.1 - - [28/Dec/2023 18:02:59] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:02:59,629 - 127.0.0.1 - - [28/Dec/2023 18:02:59] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:02:59,633 - 127.0.0.1 - - [28/Dec/2023 18:02:59] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 18:02:59,638 - 127.0.0.1 - - [28/Dec/2023 18:02:59] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 18:21:36,905 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 18:21:37,822 -  * Restarting with stat
+2023-12-28 18:21:43,914 -  * Debugger is active!
+2023-12-28 18:21:43,955 -  * Debugger PIN: 706-634-508
+2023-12-28 18:21:44,004 - 127.0.0.1 - - [28/Dec/2023 18:21:44] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:21:48,176 - 127.0.0.1 - - [28/Dec/2023 18:21:48] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 18:21:48,189 - 127.0.0.1 - - [28/Dec/2023 18:21:48] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 18:21:48,903 - 127.0.0.1 - - [28/Dec/2023 18:21:48] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:21:48,941 - 127.0.0.1 - - [28/Dec/2023 18:21:48] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 18:21:48,947 - 127.0.0.1 - - [28/Dec/2023 18:21:48] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:24:15,365 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 18:24:16,381 -  * Restarting with stat
+2023-12-28 18:24:22,001 -  * Debugger is active!
+2023-12-28 18:24:22,026 -  * Debugger PIN: 706-634-508
+2023-12-28 18:24:22,070 - 127.0.0.1 - - [28/Dec/2023 18:24:22] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:24:29,709 - 127.0.0.1 - - [28/Dec/2023 18:24:29] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 18:24:29,718 - 127.0.0.1 - - [28/Dec/2023 18:24:29] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 18:24:30,290 - 127.0.0.1 - - [28/Dec/2023 18:24:30] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:24:30,335 - 127.0.0.1 - - [28/Dec/2023 18:24:30] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:24:30,344 - 127.0.0.1 - - [28/Dec/2023 18:24:30] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 18:24:30,348 - 127.0.0.1 - - [28/Dec/2023 18:24:30] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 18:25:10,633 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 18:25:11,465 -  * Restarting with stat
+2023-12-28 18:25:15,999 -  * Debugger is active!
+2023-12-28 18:25:16,029 -  * Debugger PIN: 706-634-508
+2023-12-28 18:25:16,074 - 127.0.0.1 - - [28/Dec/2023 18:25:16] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:25:20,936 - 127.0.0.1 - - [28/Dec/2023 18:25:20] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 18:25:20,946 - 127.0.0.1 - - [28/Dec/2023 18:25:20] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 18:25:21,931 - 127.0.0.1 - - [28/Dec/2023 18:25:21] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:25:21,969 - 127.0.0.1 - - [28/Dec/2023 18:25:21] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:26:11,094 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-28 18:26:11,977 -  * Restarting with stat
+2023-12-28 18:26:16,461 -  * Debugger is active!
+2023-12-28 18:26:16,497 -  * Debugger PIN: 706-634-508
+2023-12-28 18:26:16,545 - 127.0.0.1 - - [28/Dec/2023 18:26:16] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 18:26:16,552 - 127.0.0.1 - - [28/Dec/2023 18:26:16] "GET /api/uploads HTTP/1.1" 200 -
+2023-12-28 18:26:17,416 - 127.0.0.1 - - [28/Dec/2023 18:26:17] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:26:17,475 - 127.0.0.1 - - [28/Dec/2023 18:26:17] "GET /api/srt/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 18:26:44,062 - 127.0.0.1 - - [28/Dec/2023 18:26:44] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 18:33:01,654 - 127.0.0.1 - - [28/Dec/2023 18:33:01] "GET /api/results/7e7fe030-02c7-4481-b1de-b2b607847d7f HTTP/1.1" 200 -
+2023-12-28 23:17:33,745 - 127.0.0.1 - - [28/Dec/2023 23:17:33] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:17:35,442 - 127.0.0.1 - - [28/Dec/2023 23:17:35] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:17:36,366 - 127.0.0.1 - - [28/Dec/2023 23:17:36] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:17:37,131 - 127.0.0.1 - - [28/Dec/2023 23:17:37] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:17:38,030 - 127.0.0.1 - - [28/Dec/2023 23:17:38] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:18:22,692 - 127.0.0.1 - - [28/Dec/2023 23:18:22] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:18:22,699 - 127.0.0.1 - - [28/Dec/2023 23:18:22] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:20:39,485 - 127.0.0.1 - - [28/Dec/2023 23:20:39] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:20:39,498 - 127.0.0.1 - - [28/Dec/2023 23:20:39] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:20:39,501 - 127.0.0.1 - - [28/Dec/2023 23:20:39] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:20:41,759 - 127.0.0.1 - - [28/Dec/2023 23:20:41] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:22:49,384 - 127.0.0.1 - - [28/Dec/2023 23:22:49] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:22:50,672 - 127.0.0.1 - - [28/Dec/2023 23:22:50] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:22:53,130 - 127.0.0.1 - - [28/Dec/2023 23:22:53] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:23:08,091 - 127.0.0.1 - - [28/Dec/2023 23:23:08] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:23:11,415 - 127.0.0.1 - - [28/Dec/2023 23:23:11] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:23:12,697 - 127.0.0.1 - - [28/Dec/2023 23:23:12] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:23:21,527 - 127.0.0.1 - - [28/Dec/2023 23:23:21] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-28 23:23:34,778 - 127.0.0.1 - - [28/Dec/2023 23:23:34] "[35m[1mGET /api/video/7e7fe030-02c7-4481-b1de-b2b607847d7f/Aqui_Vive_Gente.mp4 HTTP/1.1[0m" 206 -
+2023-12-30 11:32:39,788 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/util.py', reloading
+2023-12-30 11:32:40,808 -  * Restarting with stat
+2023-12-30 11:32:49,055 -  * Debugger is active!
+2023-12-30 11:32:49,082 -  * Debugger PIN: 706-634-508
+2023-12-30 11:32:52,240 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-30 11:32:53,408 -  * Restarting with stat
+2023-12-30 11:32:58,300 -  * Debugger is active!
+2023-12-30 11:32:58,318 -  * Debugger PIN: 706-634-508
+2023-12-30 11:33:44,216 -  * Detected change in '/Users/adavila/Documents/andres/github/whisper/whisper-api/api/__init__.py', reloading
+2023-12-30 11:33:45,027 -  * Restarting with stat
+2023-12-30 11:33:51,055 -  * Debugger is active!
+2023-12-30 11:33:51,067 -  * Debugger PIN: 706-634-508

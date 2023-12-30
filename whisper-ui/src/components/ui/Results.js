@@ -80,7 +80,7 @@ export const ResultsPaper = ({ selectedFile, videoDiv }) => {
               paddingTop={"2rem"}
               paddingLeft={"2rem"}
             >
-              Text
+              Translation
             </Typography>
             <Typography fontSize={"15px"} padding={"2rem"}>
               {selectedFile["text"]}

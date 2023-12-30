@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import axios from "axios";
 
+import ReactPlayer from 'react-player'
 import { CardMedia } from "@mui/material";
 import { ProcessedPaper } from "./ui/Processed.js";
 import { QueueHandlerContext } from "./Content.js";
@@ -21,22 +22,31 @@ export const ProcessedFilesComponent = ({ queueHeight, totalHeight }) => {
           videoURL: response["data"]["video_url"],
         });
         setVideoDiv(
-          <CardMedia
+          <ReactPlayer
             controls
             component="video"
             alt="text video"
             height="400px"
+            width="100%"
             onError={(error) => console.log(error)}
-            image={`/api/video/${response["data"]["video_url"]}`}
-          >
-            <track
-              label="English"
-              kind="subtitles"
-              srclang="en"
-              src="captions/vtt/sintel-en.vtt"
-              default
-            />
-          </CardMedia>
+            url={`/api/video/${response["data"]["video_url"]}`}
+            config={{
+              file: {
+                attributes: {
+                  crossOrigin: "anonymous"
+                },
+                tracks: [
+                  {
+                    kind: "subtitles",
+                    src: `/api/srt/${response["data"]["results"]["id"]}`,
+                    srcLang: "en",
+                    default: true,
+                    mode: "showing"
+                  },
+                ]
+              }
+            }}
+          />
         );
       })
       .catch((error) => console.log(error));

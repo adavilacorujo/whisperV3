@@ -11,8 +11,7 @@ import time
 import pickle
 
 from uuid import uuid4
-from flask_cors import CORS
-from datetime import datetime
+from datetime import datetime, timedelta
 from werkzeug.utils import secure_filename
 from flask import Flask, request, send_file, make_response, jsonify, abort
 
@@ -225,6 +224,7 @@ def results(id : str):
     if os.path.exists(results_path):
         return jsonify({
             'video_url': os.sep.join(model_data["location"].split(os.sep)[-2:]),
+            'srt_url': os.path.join(id, 'captions.srt'),
             'results': json.load(open(results_path, 'r')),
             'filename': model_data["location"].split(os.sep)[-1],
         })
@@ -243,5 +243,41 @@ def video(id : str, video : str):
     """
     video_path = os.path.abspath(os.path.join(upload_folder, id, video))
     return send_file(video_path, mimetype='video' + video_path.split('.')[-1])
+
+@whisper_app.route('/api/srt/<string:id>', methods=['GET'])
+def srt(id : str):
+    """
+    Get srt file from API per id
+
+    Args:
+        - srt (str), path of file to query
+
+    Return:
+        - (blob), file object
+    """
+    file_path = os.path.abspath(os.path.join(upload_folder, id, 'results.json'))
+    chunks = json.load(open(file_path, 'r'))['result'].get('chunks', [])
+
+    srt_path = os.path.abspath(os.path.join(upload_folder, id, 'captions.srt'))
+    if not os.path.exists(srt_path):
+        srt_f = open(srt_path, 'w')
+
+        srt_f.write('WEBVTT\n\n')
+
+        start_time = datetime(2023, 1, 1, 0, 0, 0, 0)
+        for chunk in chunks:
+            text = chunk['text']
+            timestamp = chunk['timestamp']
+            temp_start = start_time + timedelta(seconds=timestamp[0])
+            temp_end = start_time + timedelta(seconds=timestamp[1])
+
+            formatted_time = '{} --> {} align:middle line:84%'.format(temp_start.strftime('%H:%M:%S.%f')[:-3], temp_end.strftime('%H:%M:%S.%f')[:-3])
+            
+            srt_f.write(formatted_time + '\n')
+            srt_f.write(text.strip(' ') + '\n\n')
+
+        srt_f.close()
+
+    return send_file(srt_path)
 
 
