@@ -13,3 +13,4 @@ node_modules/*
 python-packages/
 models/
 
+.DS_Store
